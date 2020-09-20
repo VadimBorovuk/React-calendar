@@ -1,0 +1,29 @@
+.werD__content{
+  background: url("../../assets/images/background.jpg") no-repeat center;
+  background-size: cover;
+  height: 900px;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .content__info{
+    display: flex;
+    flex-wrap: wrap;
+    height: 900px;
+    .werD__calendar{
+      height: 100%;
+      background: #272829;
+      padding: 240px 0;
+      @media screen and (max-width: 991px) {
+        padding: 55px 0;
+      }
+    }
+  }
+
+}

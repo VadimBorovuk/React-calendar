@@ -1,0 +1,43 @@
+.werD__header{
+  background: #fff;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  .header__logo{
+    @media screen and (max-width: 767px){
+      text-align: center;
+    }
+  }
+  .header__nav-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @media screen and (max-width: 767px){
+      margin: 20px 0;
+    }
+    .header__nav-item{
+      font-weight: normal;
+      font-size: 28px;
+      text-transform: uppercase;
+      color: #000000;
+      text-decoration: none;
+      margin: 0 16px;
+      position: relative;
+      @media screen and (max-width: 991px){
+        font-size: 20px;
+      }
+      &:focus:after{
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background: #FDD000;
+      }
+    }
+  }
+}
+

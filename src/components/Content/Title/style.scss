@@ -1,0 +1,38 @@
+.content__title {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 260px 0;
+  @media screen and (max-width: 991px) {
+    padding: 70px 0;
+  }
+
+  &-upper {
+    text-align: right;
+    letter-spacing: 3.5px;
+    color: #FDD000;
+    text-transform: uppercase;;
+    font-weight: 900;
+    font-size: 40px;
+    @media screen and (max-width: 991px) {
+      text-align: center;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 25px;
+    }
+  }
+
+  &-down {
+    text-align: right;
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+    color: #DFDFDF;
+    @media screen and (max-width: 991px) {
+      text-align: center;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+}
