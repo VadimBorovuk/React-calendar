@@ -52,7 +52,20 @@ export default function Calendar({ value, onChange }) {
        modalView.classList.toggle('active')
     }
 
+    function getMonth (){
+        const days = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November','December'];
+        const month = new Date(value).getMonth()
+        return days[month]
+    }
+
+    function getDay (){
+        const weekDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const day = new Date(value).getDay()
+        return weekDay[day]
+    }
+
     return (
+
         <div className="calendar">
             <Header value={value} onChange={onChange} />
 
@@ -90,7 +103,7 @@ export default function Calendar({ value, onChange }) {
                                     Month
                                 </div>
                                 <div className="content__item-field">
-                                    <input type="text" value="September" disabled/>
+                                    <input type="text" value={getMonth()} disabled/>
                                 </div>
                             </div>
                             <div className="content__item">
@@ -98,7 +111,7 @@ export default function Calendar({ value, onChange }) {
                                     Day
                                 </div>
                                 <div className="content__item-field">
-                                    <input type="text" value="18th Friday" disabled/>
+                                    <input type="text" value={getDay()} disabled/>
                                 </div>
                             </div>
                         </div>
